@@ -429,9 +429,8 @@ void get_volume() {
     volume = mic_power();
     volume = 2.f * abs(ADC_ADJUST(volume)); // Ajusta para intervalo de 0 a 3.3V. (apenas magnitude, sem sinal)
 
-    // Exibe a frequência e o volume no display.
+    // Exibe o volume no display.
     char buffer[64];
-    static float last_frequency = -1;
     static int volume_anterior = -1;
 
     int volume_atual = (int)(volume * 100);
